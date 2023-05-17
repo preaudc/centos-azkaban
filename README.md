@@ -1,12 +1,17 @@
 # Create and run Azkaban on podman
 
-## Compile Azkaban on your workstation and create a tarball for the installation in the podman image
+## Compile Azkaban on your workstation
 
 ```shell
 sudo dnf install java-1.8.0-openjdk-openjfx
 curl -O https://github.com/azkaban/azkaban/archive/refs/tags/3.57.0.tar.gz
 tar -zxvf 3.57.0.tar.gz
 cd azkaban; ./gradlew build installDist
+```
+
+## Create a tarball to install Azkaban in the podman image
+
+```shell
 tar -zcvf azkaban-solo-server.tar.gz azkaban/azkaban-solo-server/build/install/azkaban-solo-server
 ```
 
