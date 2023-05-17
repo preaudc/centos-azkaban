@@ -15,4 +15,4 @@ RUN chmod +x /home/azkaban/start-solo.sh
 RUN chmod +x /home/azkaban/shutdown-solo.sh
 EXPOSE 8081
 USER azkaban
-ENTRYPOINT /home/azkaban/start-solo.sh
+ENTRYPOINT ["/home/azkaban/start-solo.sh"]
